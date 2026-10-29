@@ -18,7 +18,6 @@ The `main()` function runs both functions and displays the results.
 - `undocumented_script.py` — the refactored Python program.
 - `CODE_REVIEW.md` — a review of the original code and the improvements made.
 - `DECISIONS.md` — an explanation of the refactoring decisions.
-- `SCREENCAST_SCRIPT.md` — a script for explaining the project in a short screen recording.
 
 ## How to Run the Program
 
