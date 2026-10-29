@@ -1,31 +1,42 @@
-def do_math_stuff(list_of_nums):
-    result = []
-    for num in list_of_nums:
-        if num % 2 == 0:
-            result.append(num * 2)
-        else:
-            result.append(num * 3)
-    return result
+
+"""Process numbers and words and display the results."""
 
 
-def do_string_stuff(list_of_strings):
-    x = ""
-    for s in list_of_strings:
-        if len(s) > 5:
-            x += s.upper() + " "
+def process_numbers(numbers):
+    """Multiply even numbers by 2 and odd numbers by 3."""
+    processed_numbers = []
+
+    for number in numbers:
+        if number % 2 == 0:
+            processed_numbers.append(number * 2)
         else:
-            x += s.lower() + " "
-    return x.strip()
+            processed_numbers.append(number * 3)
+
+    return processed_numbers
+
+
+def process_strings(words):
+    """Capitalize words based on their length and return one string."""
+    processed_words = []
+
+    for word in words:
+        if len(word) > 5:
+            processed_words.append(word.upper())
+        else:
+            processed_words.append(word.lower())
+
+    return " ".join(processed_words)
 
 
 def main():
-    list1 = [1, 2, 3, 4, 5, 6, 7]
-    list2 = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
+    """Run the program and print the results."""
+    numbers = [1, 2, 3, 4, 5, 6, 7]
+    words = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
 
-    processed_nums = do_math_stuff(list1)
-    processed_strings = do_string_stuff(list2)
+    processed_numbers = process_numbers(numbers)
+    processed_strings = process_strings(words)
 
-    print("Processed Numbers:", processed_nums)
+    print("Processed Numbers:", processed_numbers)
     print("Processed Strings:", processed_strings)
 
 
